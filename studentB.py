@@ -21,12 +21,12 @@ def get_user_move(board):
         if element == ' ':
             table.append(iterator)
     while True:
-        wybor = input("Podaj numer gdzie chcesz wpisac: ")
+        choice = input("Podaj numer gdzie chcesz wpisac: ")
         try:
-            liczba = int(wybor)
+            number = int(choice)
 
-            if liczba in table:
-                board[liczba] = 'O'
+            if number in table:
+                board[number] = 'O'
                 return board
             else:
                 print("Zjebales")
@@ -37,14 +37,14 @@ def get_user_move(board):
 
 def is_player_starting():
     while True:
-        imie = input("Czy chcesz zaczynac, wpisz 1 jeśli tak, 2 jeśli nie, 3 jeśli chcesz wylosować: ")
+        name = input("Czy chcesz zaczynac, wpisz 1 jeśli tak, 2 jeśli nie, 3 jeśli chcesz wylosować: ")
         try:
-            liczba = int(imie)
-            if liczba == 1:
+            number = int(name)
+            if number == 1:
                 return True
-            elif liczba == 2:
+            elif number == 2:
                 return False
-            elif liczba == 3:
+            elif number == 3:
                 rand = random.randint(0, 1)
                 if rand == 0:
                     return True
