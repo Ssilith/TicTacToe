@@ -30,6 +30,7 @@ def get_user_move(board):
 
             if liczba in table:
                 board[liczba] = "O"
+                return
             else:
                 print("Zjebales")
 
