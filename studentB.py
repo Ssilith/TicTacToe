@@ -1,19 +1,16 @@
-
 import random
+
 
 def ai_move(board):
     table = []
     iterator = -1
     for element in board:
         iterator += 1
-        if element == " ":
+        if element == ' ':
             table.append(iterator)
     select_icon = random.choice(table)
-    board[select_icon] = "X"
-    return
-
-
-
+    board[select_icon] = 'X'
+    return board
 
 
 def get_user_move(board):
@@ -21,7 +18,7 @@ def get_user_move(board):
     iterator = -1
     for element in board:
         iterator += 1
-        if element == " ":
+        if element == ' ':
             table.append(iterator)
     while True:
         wybor = input("Podaj numer gdzie chcesz wpisac: ")
@@ -29,8 +26,8 @@ def get_user_move(board):
             liczba = int(wybor)
 
             if liczba in table:
-                board[liczba] = "O"
-                return
+                board[liczba] = 'O'
+                return board
             else:
                 print("Zjebales")
 
@@ -47,20 +44,13 @@ def is_player_starting():
                 return True
             elif liczba == 2:
                 return False
-            elif liczba ==3:
-              rand =  random.randint(0, 1)
-              if rand == 0:
-                  return True
-              else:
-                  return False
+            elif liczba == 3:
+                rand = random.randint(0, 1)
+                if rand == 0:
+                    return True
+                else:
+                    return False
             else:
                 print("Zjebales")
         except ValueError:
             print("Zjebales")
-
-
-
-
-
-
-
