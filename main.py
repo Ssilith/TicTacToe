@@ -10,4 +10,3 @@ while not is_game_over(board):
     players_move = not players_move
 
 announce_outcome(board, players_move)
-

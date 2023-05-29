@@ -9,7 +9,8 @@ def ai_move(board):
         if element == " ":
             table.append(iterator)
     select_icon = random.choice(table)
-    return select_icon
+    board[select_icon] = "X"
+    return
 
 
 
@@ -28,7 +29,7 @@ def get_user_move(board):
             liczba = int(wybor)
 
             if liczba in table:
-                return liczba
+                board[liczba] = "O"
             else:
                 print("Zjebales")
 
